@@ -1,0 +1,137 @@
+<div class="container pt-4">
+  <div class="row">
+    <div class="col-lg-6 offset-lg-3">
+      <div class="card">
+        <div class="card-body">
+          <h4>Agregar empleado a plantilla</h4>
+          <form [formGroup]="empleadoForm" (ngSubmit)="onSubmit()" class="mt-4">
+            <div class="row mb-2">
+              <div class="col">
+                <input
+                  type="text"
+                  id="nombre"
+                  formControlName="nombre"
+                  class="form-control"
+                  placeholder="Nombre"
+                  pattern="[A-Za-z\s]*"
+                  required
+                  aria-label="Nombre"
+                />
+              </div>
+              <div class="col">
+                <input
+                  type="text"
+                  id="apellidos"
+                  formControlName="apellidos"
+                  class="form-control"
+                  placeholder="Apellido"
+                  pattern="[A-Za-z\s]*"
+                  required
+                  aria-label="Apellido"
+                />
+              </div>
+            </div>
+            <br/>
+            <div class="row mb-2">
+              <div class="col">
+                <input
+                  type="email"
+                  id="email"
+                  formControlName="email"
+                  class="form-control"
+                  placeholder="Correo Electrónico"
+                  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                  required
+                  aria-label="Correo Electrónico"
+                />
+              </div>
+            </div>
+            <br/>
+            <div class="row mb-2">
+              <div class="col">
+                <input
+                  type="text"
+                  id="cargo"
+                  formControlName="cargo"
+                  class="form-control"
+                  placeholder="Cargo"
+                  pattern="[A-Za-z\s]*"
+                  required
+                  aria-label="Cargo"
+                />
+              </div>
+              <div class="col">
+                <input
+                  type="text"
+                  id="categoria"
+                  formControlName="categoria"
+                  class="form-control"
+                  placeholder="Categoría"
+                  pattern="[A-Za-z\s]*"
+                  required
+                  aria-label="Categoría"
+                />
+              </div>
+            </div>
+            <br/>
+            <div class="row mb-2">
+              <div class="col">
+                <input
+                  type="number"
+                  id="sueldo"
+                  formControlName="sueldo"
+                  class="form-control"
+                  placeholder="Sueldo en €"
+                  min="0.01"
+                  step="0.01"
+                  required
+                  aria-label="Sueldo en €"
+                />
+              </div>
+              <div class="col">
+                <input
+                  type="number"
+                  id="antiguedad"
+                  formControlName="antiguedad"
+                  class="form-control"
+                  placeholder="Antiguedad en años"
+                  min="1"
+                  max="99"
+                  required
+                  aria-label="Antiguedad en años"
+                />
+              </div>
+            </div>
+            <br/>
+            <div class="row mb-2">
+              <div class="col d-flex justify-content-center mt-4">
+                <button
+                  type="button"
+                  class="btn btn-sm btn-primary rounded-pill btn-width"
+                  routerLink="/list-empleados"
+                  aria-label="Volver"
+                >
+                  Volver</button
+                >&nbsp;
+                <button
+                  type="reset"
+                  class="btn btn-sm btn-secondary rounded-pill ml-2 btn-width"
+                  aria-label="Limpiar"
+                >
+                  Limpiar</button
+                >&nbsp;
+                <button
+                  type="submit"
+                  class="btn btn-sm btn-success rounded-pill ml-2 btn-width"
+                  aria-label="Guardar"
+                >
+                  Guardar
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

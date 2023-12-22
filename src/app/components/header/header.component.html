@@ -1,0 +1,68 @@
+<header class="p-3 text-bg-dark">
+  <div class="container">
+    <div
+      class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start"
+    >
+      <span
+        class="navbar-brand mb-0 h4 text-warning"
+        aria-label="Logo de la aplicación de nóminas"
+        >Aplicación de nominas</span
+      >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <ul
+        class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center ml-5 mb-md-0"
+        aria-label="Menú de navegación"
+      >
+        <li class="nav-item">
+          <a
+            class="nav-link text-white"
+            routerLink="/inicio"
+            title="Inicio"
+            style="cursor: pointer"
+            aria-label="Inicio"
+            >Inicio</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link text-white"
+            routerLink="/empleados"
+            title="Empleados"
+            style="cursor: pointer"
+            aria-label="Empleados"
+            >Empleados</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link text-white"
+            routerLink="/create-empleado"
+            title="Crear Empleado"
+            style="cursor: pointer"
+            aria-label="Crear Empleado"
+            >Crear Empleado</a
+          >
+        </li>
+      </ul>
+      <button
+        *ngIf="!isLoggedIn"
+        type="button"
+        class="btn btn-outline-light ms-auto"
+        routerLink="/login"
+        title="Login"
+        style="cursor: pointer"
+        aria-label="Login"
+      >
+        Login
+      </button>
+      <button
+        *ngIf="isLoggedIn"
+        type="button"
+        class="btn btn-outline-light ms-auto"
+        (click)="logout()"
+        aria-label="Logout"
+      >
+        Logout
+      </button>
+    </div>
+  </div>
+</header>

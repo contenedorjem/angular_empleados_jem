@@ -1,0 +1,134 @@
+{
+  "empleados": [
+    {
+      "nombre": "Ada",
+      "apellidos": "Lovelace",
+      "email": "ada.lovelace@example.com",
+      "sueldo": 120000,
+      "categoria": "Programación",
+      "cargo": "Pionera",
+      "antiguedad": 36,
+      "id": 1
+    },
+    {
+      "nombre": "Alan",
+      "apellidos": "Turing",
+      "email": "alan.turing@example.com",
+      "sueldo": 150000,
+      "categoria": "Criptografía",
+      "cargo": "Matemático",
+      "antiguedad": 41,
+      "id": 2
+    },
+    {
+      "nombre": "Grace",
+      "apellidos": "Hopper",
+      "email": "grace.hopper@example.com",
+      "sueldo": 140000,
+      "categoria": "Compiladores",
+      "cargo": "Almirante",
+      "antiguedad": 55,
+      "id": 3
+    },
+    {
+      "nombre": "Linus",
+      "apellidos": "Torvalds",
+      "email": "linus.torvalds@example.com",
+      "sueldo": 160000,
+      "categoria": "Sistemas Operativos",
+      "cargo": "Desarrollador",
+      "antiguedad": 30,
+      "id": 4
+    },
+    {
+      "nombre": "Tim",
+      "apellidos": "Berners-Lee",
+      "email": "tim.berners-lee@example.com",
+      "sueldo": 180000,
+      "categoria": "World Wide Web",
+      "cargo": "Científico de la Computación",
+      "antiguedad": 45,
+      "id": 5
+    },
+    {
+      "nombre": "John",
+      "apellidos": "McCarthy",
+      "email": "john.mccarthy@example.com",
+      "sueldo": 130000,
+      "categoria": "Inteligencia Artificial",
+      "cargo": "Inventor de Lisp",
+      "antiguedad": 50,
+      "id": 6
+    },
+    {
+      "nombre": "Margaret",
+      "apellidos": "Hamilton",
+      "email": "margaret.hamilton@example.com",
+      "sueldo": 150000,
+      "categoria": "Desarrollo de Software",
+      "cargo": "Ingeniera de Software",
+      "antiguedad": 40,
+      "id": 7
+    },
+    {
+      "nombre": "Donald",
+      "apellidos": "Knuth",
+      "email": "donald.knuth@example.com",
+      "sueldo": 170000,
+      "categoria": "Algoritmos",
+      "cargo": "Profesor Emérito",
+      "antiguedad": 55,
+      "id": 8
+    },
+    {
+      "nombre": "Vinton",
+      "apellidos": "Cerf",
+      "email": "vinton.cerf@example.com",
+      "sueldo": 160000,
+      "categoria": "Redes",
+      "cargo": "Ingeniero",
+      "antiguedad": 60,
+      "id": 9
+    },
+    {
+      "nombre": "Shafi",
+      "apellidos": "Goldwasser",
+      "email": "shafi.goldwasser@example.com",
+      "sueldo": 140000,
+      "categoria": "Criptografía",
+      "cargo": "Científica de la Computación",
+      "antiguedad": 48,
+      "id": 10
+    },
+    {
+      "nombre": "Andrew",
+      "apellidos": "Ng",
+      "email": "andrew.ng@example.com",
+      "sueldo": 175000,
+      "categoria": "Inteligencia Artificial",
+      "cargo": "Profesor",
+      "antiguedad": 45,
+      "id": 11
+    },
+    {
+      "nombre": "Satya",
+      "apellidos": "Nadella",
+      "email": "satya.nadella@example.com",
+      "sueldo": 190000,
+      "categoria": "Liderazgo Empresarial",
+      "cargo": "CEO",
+      "antiguedad": 25,
+      "id": 13
+    },
+    {
+      "nombre": "patatassoft",
+      "apellidos": "Ware",
+      "email": "puchi@puchicorporation.wow",
+      "sueldo": 3,
+      "categoria": "Chalmers",
+      "cargo": "superintendente",
+      "antiguedad": 1,
+      "id": 14
+    }
+  ]
+}

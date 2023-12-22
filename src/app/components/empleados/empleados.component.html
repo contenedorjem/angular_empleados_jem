@@ -1,0 +1,83 @@
+<div class="container mt-4">
+  <div class="card">
+    <div class="card-body">
+      <div class="card-body d-flex justify-content-between">
+        <span class="h3" aria-label="Título de la plantilla de empleados">Plantilla de empleados</span>
+        <button
+          class="btn btn-sm btn-dark rounded-pill text-warning"
+          routerLink="/create-empleado"
+          title="Agregar empleado"
+          style="cursor: pointer"
+          aria-label="Agregar empleado"
+        >
+          Agregar empleado
+        </button>
+      </div>
+      <table class="table table table-striped mt-3" aria-label="Tabla de empleados">
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Email</th>
+            <th>Sueldo</th>
+            <th>Categoría</th>
+            <th>Cargo</th>
+            <th>Antigüedad</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let empleado of empleados; let i = index">
+            <td *ngIf="editingIndex !== i" aria-label="Nombre del empleado">{{ empleado.nombre }}</td>
+            <td *ngIf="editingIndex === i">
+              <input [(ngModel)]="empleado.nombre" class="form-control" aria-label="Editar nombre del empleado" pattern="[A-Za-z\s]*" />
+            </td>
+            <td *ngIf="editingIndex !== i" aria-label="Apellidos del empleado">{{ empleado.apellidos }}</td>
+            <td *ngIf="editingIndex === i">
+              <input [(ngModel)]="empleado.apellidos" class="form-control" aria-label="Editar apellidos del empleado" pattern="[A-Za-z\s]*" />
+            </td>
+            <td *ngIf="editingIndex !== i" aria-label="Email del empleado">{{ empleado.email }}</td>
+            <td *ngIf="editingIndex === i">
+              <input [(ngModel)]="empleado.email" class="form-control" aria-label="Editar email del empleado" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" />
+            </td>
+            <td *ngIf="editingIndex !== i" aria-label="Sueldo del empleado">
+              {{ empleado.sueldo | currency : "EUR" : "symbol" : "1.2-2" }}
+            </td>
+            <td *ngIf="editingIndex === i">
+              <input [(ngModel)]="empleado.sueldo" class="form-control" aria-label="Editar sueldo del empleado" />
+            </td>
+            <td *ngIf="editingIndex !== i" aria-label="Categoría del empleado">{{ empleado.categoria }}</td>
+            <td *ngIf="editingIndex === i">
+              <input [(ngModel)]="empleado.categoria" class="form-control" aria-label="Editar categoría del empleado" pattern="[A-Za-z\s]*" />
+            </td>
+            <td *ngIf="editingIndex !== i" aria-label="Cargo del empleado">{{ empleado.cargo }}</td>
+            <td *ngIf="editingIndex === i">
+              <input [(ngModel)]="empleado.cargo" class="form-control" aria-label="Editar cargo del empleado" pattern="[A-Za-z\s]*" />
+            </td>
+            <td *ngIf="editingIndex !== i" aria-label="Antigüedad del empleado">{{ empleado.antiguedad }}</td>
+            <td *ngIf="editingIndex === i">
+              <input [(ngModel)]="empleado.antiguedad" class="form-control" aria-label="Editar antigüedad del empleado" />
+            </td>
+            <td>
+              <i
+                class="fa-solid fa-pen-to-square fa-lg text-info"
+                (click)="toggleEdit(i, empleado)"
+                title="Editar empleado"
+                style="cursor: pointer"
+                aria-label="Editar empleado"
+              ></i
+              >&nbsp;
+              <i
+                class="fa-solid fa-trash-can fa-lg text-danger"
+                (click)="deleteEmpleado(i, empleado)"
+                title="Borrar empleado"
+                style="cursor: pointer"
+                aria-label="Borrar empleado"
+              ></i>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
